@@ -18,8 +18,9 @@ const app = express();
 app.use(cors())
 //  const http = require('http').Server(app);
 //  const client = require('socket.io')(http);
+const port = process.env.PORT || 5000;
 
-var server = app.listen(5000);
+var server = app.listen(port);
 var client = require('socket.io').listen(server);
 // Body parser middleware
 app.use(express.json({ extended: false }))
@@ -103,7 +104,6 @@ app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "angular", "index.html"));
   });
   
-const port = process.env.PORT || 5000;
 
 //app.listen(port, () => console.log(`Server running on port ${port}`));
 
