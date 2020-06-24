@@ -1,0 +1,40 @@
+<mat-card>
+<h1>Login Form</h1>
+
+    <form [formGroup]="profileForm" >
+  
+      <mat-form-field>
+        <input matInput
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          required
+          email>
+      </mat-form-field>
+  
+      <br>
+  
+      <mat-form-field>
+        <input matInput
+          [type]="'password'"
+          placeholder="Password"
+          formControlName="password"
+          >  
+      </mat-form-field>
+  
+      <br>
+      <button mat-raised-button
+      (click)="sumbit()"
+        color="accent">login
+       </button>
+        <button mat-raised-button
+          (click)="goToSignUp()"
+          color="accent">
+          Click For Sign Up
+        </button>
+
+  </form>
+    
+  </mat-card>
+
+  

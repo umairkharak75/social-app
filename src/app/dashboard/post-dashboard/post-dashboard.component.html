@@ -1,0 +1,29 @@
+<mat-card>
+
+    
+        <form [formGroup]="postForm" >
+          <mat-form-field>
+            <input matInput
+              placeholder="Add Post "
+              formControlName="post"
+              required
+              >
+          </mat-form-field>
+          <br>
+            <button mat-raised-button
+              (click)="addPost()"
+              color="accent">
+              Add Post
+            </button>
+    
+      </form>
+        
+      </mat-card>
+      <br>
+    <h1  style="padding-left: 35%;" *ngIf="post.length===0">No posts yet added</h1>
+    
+    <ul *ngFor="let post of post" style="padding-left: 35%;">
+        <h1 style="padding-left: 5%;">
+            {{post}}
+        </h1>
+    </ul>

@@ -1,0 +1,42 @@
+<mat-card>
+
+
+  <form [formGroup]="profileForm" >
+
+    <mat-form-field>
+      <input matInput
+        type="name"
+        placeholder="name"
+        formControlName="name"
+        required
+        >
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        required
+        email>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <input matInput
+        [type]="'password'"
+        placeholder="Password"
+        formControlName="password"
+        >  
+    </mat-form-field>
+
+    <br>
+    <button mat-raised-button
+    
+    (click)="sumbit()"
+      color="accent">
+      
+      Create account</button>
+  </form>
+</mat-card>

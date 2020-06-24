@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+.basic-container {
+  padding: 30px;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+  margin: 8px;
+}
+.mat-card{
+transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+display: block;
+position: relative;
+padding: 16px;
+padding-left: 45px;
+/* position: absolute; */
+border-radius: 4px;
+width: 293px;
+margin-left: 473px;
+}
+
+/**  Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
